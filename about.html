@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script defer src="assets/ui.js"></script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4772692876726791"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="toolbar">
+      <a class="backlink" href="index.html">← <span data-i18n="common.back">Back</span></a>
+      <div class="lang-switch" title="Language">
+        <button class="chip" data-lang="en">EN</button>
+        <button class="chip" data-lang="ru">RU</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h1 style="margin:0 0 10px">About</h1>
+
+      <p class="muted" style="margin:0 0 12px">
+        Tools Hub is a small collection of simple utilities that run entirely in your browser.
+      </p>
+
+      <h2 style="margin:18px 0 8px; font-size:18px">Why</h2>
+      <p class="muted" style="margin:0 0 10px">
+        Fast, private, and lightweight tools for everyday tasks: cleaning text, extracting text from PDFs, and more.
+      </p>
+
+      <h2 style="margin:18px 0 8px; font-size:18px">Privacy-first</h2>
+      <p class="muted" style="margin:0 0 10px">
+        Wherever possible, tools process your data locally on your device. No account required.
+      </p>
+
+      <h2 style="margin:18px 0 8px; font-size:18px">Feedback</h2>
+      <p class="muted" style="margin:0">
+        If you have suggestions or found a bug, contact: <span id="contactEmail">
+        <a href="mailto:remygremory.tools@proton.me">
+        remygremory.tools@proton.me
+        </a></span>
+      </p>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+  </div>
+</body>
+</html>

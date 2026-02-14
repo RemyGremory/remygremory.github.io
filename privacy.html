@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy</title>
+
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script defer src="assets/ui.js"></script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4772692876726791"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="toolbar">
+      <a class="backlink" href="index.html">← <span data-i18n="common.back">Back</span></a>
+      <div class="lang-switch" title="Language">
+        <button class="chip" data-lang="en">EN</button>
+        <button class="chip" data-lang="ru">RU</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h1 style="margin:0 0 10px">Privacy Policy</h1>
+      <p class="muted" style="margin:0 0 12px">
+        This website provides browser-based tools. We do not require registration.
+      </p>
+
+      <h2 style="margin:18px 0 8px; font-size:18px">Data processing</h2>
+      <p class="muted" style="margin:0 0 10px">
+        The tools run locally in your browser. Text you paste and files you choose are processed on your device and are not uploaded to our server.
+      </p>
+
+      <h2 style="margin:18px 0 8px; font-size:18px">Advertising</h2>
+      <p class="muted" style="margin:0 0 10px">
+        We use Google AdSense to display ads. Google and its partners may use cookies or similar technologies to personalize ads and measure performance.
+      </p>
+
+      <h2 style="margin:18px 0 8px; font-size:18px">Cookies</h2>
+      <p class="muted" style="margin:0 0 10px">
+        You can control cookies through your browser settings. Some features may not work as expected if cookies are disabled.
+      </p>
+
+      <h2 style="margin:18px 0 8px; font-size:18px">Contact</h2>
+      <p class="muted" style="margin:0">
+        For questions, contact: <span id="contactEmail">
+        <a href="mailto:remygremory.tools@proton.me">
+        remygremory.tools@proton.me
+        </a></span>
+      </p>
+
+      <p class="muted" style="margin:18px 0 0">
+        Last updated: <span id="lastUpdated"></span>
+      </p>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+  </div>
+
+  <script>
+    document.getElementById('lastUpdated').textContent = new Date().toISOString().slice(0,10);
+  </script>
+</body>
+</html>

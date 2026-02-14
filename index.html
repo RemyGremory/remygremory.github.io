@@ -65,23 +65,36 @@
       </section>
 
       <aside class="sidebar">
-        <div class="ad card">
+        <div class="ad card ad-hidden">
           <div class="ad-label" data-i18n="ad.top">Ad space</div>
-          <div class="ad-box">Top banner</div>
+          <div class="ad-box"></div>
         </div>
 
-        <div class="ad card">
-          <div class="ad-label" data-i18n="ad.side">Ad space</div>
-          <div class="ad-box">Sidebar rectangle</div>
+
+        <div class="ad card ad-hidden">
+          <div class="ad-label" data-i18n="ad.top">Ad space</div>
+          <div class="ad-box">321</div>
         </div>
 
         </aside>
     </main>
 
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="/about.html">About</a>
+        <span>•</span>
+        <a href="/privacy.html">Privacy</a>
+        <span>•</span>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </footer>
 
   </div>
 
   <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+
+
+
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
