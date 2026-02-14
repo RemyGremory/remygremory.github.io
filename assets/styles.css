@@ -39,7 +39,7 @@ body::before {
   background: radial-gradient(1200px 900px at 20% 15%, rgba(122, 142, 255, 0.24), transparent 55%),
               radial-gradient(900px 700px at 85% 35%, rgba(70, 200, 255, 0.16), transparent 60%),
               linear-gradient(140deg, var(--bg1), var(--bg2));
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
 }
 
