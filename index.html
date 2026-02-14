@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Tools Hub</title>
+  <meta name="description" content="A collection of simple web tools" />
+
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script defer src="assets/ui.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">⚡</div>
+        <div class="brand-text">
+          <div class="brand-title" data-i18n="hub.title">Tools Hub</div>
+          <div class="brand-sub" data-i18n="hub.subtitle">Small utilities, zero backend.</div>
+        </div>
+      </div>
+
+      <div class="topbar-actions">
+        <div class="lang-switch" title="Language">
+          <button class="chip" data-lang="en">EN</button>
+          <button class="chip" data-lang="ru">RU</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="content">
+        <div class="hero card">
+          <h1 data-i18n="hub.heroTitle">Welcome</h1>
+          <p data-i18n="hub.heroText">
+            Pick a tool below. Everything runs locally in your browser.
+          </p>
+        </div>
+
+        <div class="grid">
+          <a class="tool-card card" href="tools/text-cleaner/index.html">
+            <div class="tool-card__icon">🧹</div>
+            <div class="tool-card__body">
+              <div class="tool-card__title" data-i18n="tool.textCleaner.title">Text Cleaner</div>
+              <div class="tool-card__desc" data-i18n="tool.textCleaner.desc">Clean, format, and normalize text.</div>
+            </div>
+            <div class="tool-card__arrow">→</div>
+          </a>
+
+          <a class="tool-card card" href="tools/pdf-to-text/index.html">
+            <div class="tool-card__icon">📄</div>
+            <div class="tool-card__body">
+              <div class="tool-card__title" data-i18n="tool.pdfToText.title">PDF → Text</div>
+              <div class="tool-card__desc" data-i18n="tool.pdfToText.desc">Extract text from a PDF locally in your browser.</div>
+            </div>
+            <div class="tool-card__arrow">→</div>
+          </a>
+
+          <!-- add more tools here -->
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="ad card">
+          <div class="ad-label" data-i18n="ad.top">Ad space</div>
+          <div class="ad-box">Top banner</div>
+        </div>
+
+        <div class="ad card">
+          <div class="ad-label" data-i18n="ad.side">Ad space</div>
+          <div class="ad-box">Sidebar rectangle</div>
+        </div>
+
+        </aside>
+    </main>
+
+
+  </div>
+
+  <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

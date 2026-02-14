@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Text Cleaner</title>
+  <meta name="description" content="Clean and normalize text" />
+
+  <link rel="stylesheet" href="../../assets/styles.css" />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <script defer src="../../assets/ui.js"></script>
+  <script defer src="tool.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="toolbar">
+      <a class="backlink" href="../../index.html">
+        ← <span data-i18n="common.back">Back</span>
+      </a>
+
+      <div class="lang-switch" title="Language">
+        <button class="chip" data-lang="en">EN</button>
+        <button class="chip" data-lang="ru">RU</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h1 style="margin:0 0 6px" data-i18n="tool.textCleaner.title">Text Cleaner</h1>
+      <p class="muted" style="margin:0" data-i18n="tool.textCleaner.desc">Clean, format, and normalize text.</p>
+    </div>
+
+    <div class="ad card" style="margin-top:14px">
+      <div class="ad-label" data-i18n="ad.top">Ad space</div>
+      <div class="ad-box big">Tool top banner</div>
+    </div>
+
+    <div class="split" style="margin-top:14px">
+      <div class="card">
+        <div class="row" style="justify-content: space-between; margin-bottom: 10px; gap: 12px;">
+          <div class="badge" id="statsIn">0 lines • 0 words</div>
+          <div class="row">
+            <button class="btn" id="btnSample" data-i18n="common.sample">Sample</button>
+            <button class="btn" id="btnClear" data-i18n="common.clear">Clear</button>
+          </div>
+        </div>
+        <textarea id="input" placeholder="Paste text here..."></textarea>
+      </div>
+
+      <div class="card">
+        <div class="row" style="justify-content: space-between; margin-bottom: 10px; gap: 12px;">
+          <div class="badge" id="statsOut">0 lines • 0 words</div>
+          <div class="row">
+            <button class="btn" id="btnCopy" data-i18n="common.copy">Copy</button>
+            <button class="btn" id="btnDownload" data-i18n="common.download">Download</button>
+          </div>
+        </div>
+        <textarea id="output" placeholder="Result..."></textarea>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <div class="options-wrap">
+        <div class="options-left">
+          <div class="muted options-title" data-i18n="tool.textCleaner.optionsTitle">Options</div>
+
+          <div class="options-grid">
+            <div class="toggle">
+              <div class="switch" id="swTrim"></div>
+              <div data-i18n="tool.textCleaner.opt.trim">Trim lines</div>
+            </div>
+            <div class="toggle">
+              <div class="switch" id="swCollapseSpaces"></div>
+              <div data-i18n="tool.textCleaner.opt.collapseSpaces">Collapse spaces</div>
+            </div>
+
+            <div class="toggle">
+              <div class="switch" id="swRemoveEmpty"></div>
+              <div data-i18n="tool.textCleaner.opt.removeEmpty">Remove empty lines</div>
+            </div>
+            <div class="toggle">
+              <div class="switch" id="swCollapseEmpty"></div>
+              <div data-i18n="tool.textCleaner.opt.collapseEmpty">Collapse empty lines</div>
+            </div>
+
+            <div class="toggle">
+              <div class="switch" id="swJoin"></div>
+              <div data-i18n="tool.textCleaner.opt.join">Join lines</div>
+            </div>
+            <div class="toggle">
+              <div class="switch" id="swDedupe"></div>
+              <div data-i18n="tool.textCleaner.opt.dedupe">Deduplicate lines</div>
+            </div>
+          </div>
+
+          <div class="row" style="gap: 10px; align-items: center; margin-top: 12px;">
+            <div class="row" style="gap:10px; align-items:center;">
+              <div class="badge" style="opacity:.9" data-i18n="tool.textCleaner.removeLabel">Remove</div>
+              <input class="input" id="removeWhat" data-i18n-placeholder="tool.textCleaner.removePh" placeholder="word / symbol" style="max-width: 260px" />
+            </div>
+
+            <div class="dropdown" id="ddCase">
+
+              <button class="btn dd-btn" data-dd-btn>
+                <span data-i18n="tool.textCleaner.case">Case</span>: <span data-dd-label>None</span> ▾
+              </button>
+              <div class="dd-menu" data-dd-menu>
+                <button class="dd-item" data-dd-value="none" data-dd-text="None">None</button>
+                <button class="dd-item" data-dd-value="lower" data-dd-text="lower">lower</button>
+                <button class="dd-item" data-dd-value="upper" data-dd-text="UPPER">UPPER</button>
+                <button class="dd-item" data-dd-value="title" data-dd-text="Title">Title</button>
+              </div>
+            </div>
+
+            <button class="btn" id="btnRun" data-i18n="tool.textCleaner.run">Run</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+  </div>
+</body>
+</html>
